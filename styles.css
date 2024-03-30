@@ -95,7 +95,7 @@ footer{
     margin:-40px;
     height: 200px;
     align-self: center;
-    
+    transform: translate(0, 0) scale(1);
   }
 
   #newQuote {
