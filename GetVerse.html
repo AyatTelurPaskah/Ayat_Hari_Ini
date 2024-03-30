@@ -131,66 +131,6 @@
   </div>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script>
-    const imgEl = document.getElementById('random-image');
-
-const srcArray = ['assets/img1.jpg', 'assets/img2.jpg', 'assets/img3.jpg', 'assets/img4.jpg', 'assets/img5.jpg', 'assets/img6.jpg', 'assets/img7.jpg', 'assets/img8.jpg'];
-// Stores path to images in an array
-
-imgEl.addEventListener('click', () => {
-    randomImage();
-    // Runs randomImage function when user clicks on image
-});
-
-let index;
-// Current image index
-
-randomImage();
-function randomImage() {
-
-    const randomIndex = Math.floor(Math.random()*srcArray.length);
-    // Generates random number between 0 and array length-1 (because Math.floor rounds)
-
-    if (randomIndex !== index) {
-    // If number NOT same as current image index...
-
-        imgEl.src = srcArray[randomIndex];
-        //...set as image src
-
-        index = randomIndex;
-        //...and as new current index value
-
-    } else {
-    // If number same as current index value (repeat)...
-
-        randomImage();
-        //...start function from beginning again
-
-    }
-
-}
-    $(document).ready(function () {
-      // Fungsi untuk menampilkan popup setelah beberapa detik
-      function showPopupWithDelay() {
-        $('.popup-wrap').fadeIn(500);
-        $('.popup-box').removeClass('transform-out').addClass('transform-in');
-      }
-
-      // Tambahkan penundaan 5000 milidetik (2 detik) sebelum menampilkan popup secara otomatis
-      setTimeout(showPopupWithDelay, 5050);
-
-      // Tanggapi klik pada tombol popup
-
-
-      // Tanggapi klik pada tombol tutup popup
-      $('.popup-close').click(function (e) {
-        $('.popup-wrap').fadeOut(500);
-        $('.popup-box').removeClass('transform-in').addClass('transform-out');
-        e.preventDefault();
-      });
-    });
-  </script>
-
-  <script>
     var storedInput = localStorage.getItem('inputData'); // Get stored input from localStorage
     if (storedInput) {
       document.getElementById('header').textContent = "Halo " + storedInput + "! Ini ayat untukmu...";
@@ -199,7 +139,7 @@ function randomImage() {
     }
 
   </script>
-  <script src="tes.js"></script>
+<script src="tes.js"></script>
 
 </body>
 
